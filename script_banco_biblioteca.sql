@@ -16,5 +16,6 @@ create table emprestimo(
 	pk int not null primary key auto_increment,
     data_emprestimo date,
     data_devolucao date,
-	
+	aluno_fk int not null, foreign key (aluno_fk) references aluno (pk),
+    livro_fk int not null, foreign key (livro_fk) references livro (pk)
 );
